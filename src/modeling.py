@@ -75,8 +75,10 @@ class modeling():
         model.add(Activation('relu'))
         model.add(Dropout(0.5))
         
+        # 分類クラス数を定義
+        model.add(Dense(num_classes)) 
+     
         # 出力層(softmaxで0〜1の確率を返す)
-        model.add(Dense(3)) 
         model.add(Activation('softmax'))
 
         # ======================================================
